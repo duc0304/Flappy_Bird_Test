@@ -137,7 +137,7 @@ Screen - Game
    top: 0;
    width: 100%;
    height: 80%;
-   background-image: url('../assets/sky.png');
+   background-image: url('../assets/backgr2.png');
    background-repeat: repeat-x;
    background-position: 0px 100%;
    background-color: #4ec0ca;
@@ -157,11 +157,12 @@ Screen - Game
 #ceiling
 {
    position: absolute;
-   top: -16px;
+   top: 10px;
    height: 16px;
    width: 100%;
    background-image: url('../assets/ceiling.png');
    background-repeat: repeat-x;
+   border-bottom: 2px solid #225;
 
    -webkit-animation: animCeiling 481ms linear infinite;
    animation: animCeiling 481ms linear infinite;
@@ -177,6 +178,7 @@ Screen - Game
    background-repeat: repeat-x;
    background-position: 0px 0px;
    background-color: #ded895;
+   border-top: 4px solid #8e8558;
 
    -webkit-animation: animLand 2516ms linear infinite;
    animation: animLand 2516ms linear infinite;
@@ -300,16 +302,18 @@ Screen - Game
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
+   border: none;
+   border-radius: 0;
+   box-shadow: none;
 }
 
 .pipe
 {
    position: absolute;
    left: -100px;
-   width: 52px;
+   width: 120px;
    height: 100%;
    z-index: 10;
-
    -webkit-animation: animPipe 7500ms linear;
    animation: animPipe 7500ms linear;
 }
@@ -318,10 +322,13 @@ Screen - Game
 {
    position: absolute;
    top: 0;
-   width: 52px;
-   background-image: url('../assets/pipe.png');
-   background-repeat: repeat-y;
-   background-position: center;
+   width: 120px;
+   height: 100%;
+   background-color: rgba(100, 180, 220, 0.8);
+   border-left: none;
+   border-right: none;
+   box-shadow: inset 0 0 20px rgba(0, 100, 150, 0.5);
+   border-radius: 0 0 10px 10px;
 }
 
 .pipe_upper:after
@@ -329,19 +336,30 @@ Screen - Game
    content: "";
    position: absolute;
    bottom: 0;
-   width: 52px;
-   height: 26px;
-   background-image: url('../assets/pipe-down.png');
+   left: 10px;
+   width: 100px;
+   height: 150px;
+   background-image: url('../assets/dahuong.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transform: rotate(180deg);
+   border: none;
+   border-radius: 10px;
+   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .pipe_lower
 {
    position: absolute;
    bottom: 0;
-   width: 52px;
-   background-image: url('../assets/pipe.png');
-   background-repeat: repeat-y;
-   background-position: center;
+   width: 120px;
+   height: 100%;
+   background-color: rgba(100, 180, 220, 0.8);
+   border-left: none;
+   border-right: none;
+   box-shadow: inset 0 0 20px rgba(0, 100, 150, 0.5);
+   border-radius: 10px 10px 0 0;
 }
 
 .pipe_lower:after
@@ -349,9 +367,16 @@ Screen - Game
    content: "";
    position: absolute;
    top: 0;
-   width: 52px;
-   height: 26px;
-   background-image: url('../assets/pipe-up.png');
+   left: 10px;
+   width: 100px;
+   height: 150px;
+   background-image: url('../assets/dahuong.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center center;
+   border: none;
+   border-radius: 10px;
+   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 #footer
