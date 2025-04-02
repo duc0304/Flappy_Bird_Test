@@ -120,7 +120,7 @@ function startGame()
    }
 
    //start up our loops
-   var updaterate = 1000.0 / 60.0 ; //60 times a second
+   var updaterate = 1000.0 / 60.0; //60 times a second
    loopGameloop = setInterval(gameloop, updaterate);
    loopPipeloop = setInterval(updatePipes, 1400);
 
@@ -445,9 +445,9 @@ function playerScore()
 function updatePipes()
 {
    //Do any pipes need removal?
-   $(".pipe").filter(function() { return $(this).position().left <= -100; }).remove()
+   $(".pipe").filter(function() { return $(this).position().left <= -150; }).remove()
 
-   //add a new pipe (top height + bottom height  + pipeheight == flyArea) and put it in our tracker
+   //add a new pipe (top height + bottom height + pipeheight == flyArea) and put it in our tracker
    var padding = 80;
    var constraint = flyArea - pipeheight - (padding * 2); //double padding (for top and bottom)
    var topheight = Math.floor((Math.random()*constraint) + padding); //add lower padding
