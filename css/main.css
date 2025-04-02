@@ -288,18 +288,18 @@ Screen - Game
 #player
 {
    left: 60px;
-   top: 200px;
+   top: 180px;
 }
 
 .bird
 {
    position: absolute;
-   width: 34px;
-   height: 24px;
-   background-image: url('../assets/bird.png');
-
-   -webkit-animation: animBird 300ms steps(4) infinite;
-   animation: animBird 300ms steps(4) infinite;
+   width: 60px;
+   height: 60px;
+   background-image: url('../assets/virrusnew.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .pipe
